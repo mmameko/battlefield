@@ -1,0 +1,24 @@
+.battle-field-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #FFFFFF;
+}
+
+.battle-field-cell-alien-empty, .battle-field-cell-own-empty {
+  background-color: #e9e9e9;
+}
+
+.battle-field-cell-own-ship, .battle-field-cell-alien-injured {
+  background-color: #fff5bb;
+}
+
+.battle-field-cell-own-sunk, .battle-field-cell-alien-sunk {
+  background-color: #eadb8c;
+}
+
+.battle-field-cell-sunk {
+  background-color: #ffb996;
+}

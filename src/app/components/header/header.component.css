@@ -1,0 +1,178 @@
+@font-face {
+  font-family: Pacifico-Regular;
+  src: url(../../../assets/fonts/Pacifico-Regular.ttf);
+}
+
+.app-header {
+  display: flex;
+  background-color: #333333;
+  z-index: 2;
+}
+
+.app-header-logo {
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+}
+
+.app-header-logo-text {
+  color: #FFFFFF;
+  font-family: Pacifico-Regular;
+  font-size: 1.25rem;
+  transition: opacity 250ms;
+}
+
+.app-header-logo-text:hover {
+  opacity: .6;
+}
+
+.app-header-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.app-header-action {
+  margin: 0 5px;
+  border: none;
+  background-color: transparent;
+  color: #999;
+  font-size: 1rem;
+  transition: color 250ms ease-in;
+}
+
+.app-header-action:hover {
+  cursor: pointer;
+  color: #DDDDDD;
+}
+
+.app-header-action:focus {
+  outline: none;
+}
+
+.app-header-action:active {
+  color: #FFFFFF;
+}
+
+.app-header-action:disabled {
+  color: #666666;
+}
+
+.app-header-action:disabled:hover {
+  cursor: not-allowed;
+}
+
+.app-header-actions-hamburger {
+  display: none;
+}
+
+.app-header-actions-hamburger:hover {
+  cursor: pointer;
+}
+
+.app-header-actions-hamburger:hover .app-hamburger-line {
+  background-color: #DDDDDD;
+}
+
+.app-hamburger-line {
+  margin: 3px 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  transition: background-color 250ms ease-in-out;
+}
+
+.app-header-online {
+  display: inline-flex;
+  float: right;
+  height: 100%;
+  color: #999999;
+  align-items: center;
+  user-select: none;
+}
+
+.app-header-online-count {
+  margin: 0 5px;
+}
+
+@media screen and (min-width: 1224px) {
+  .app-header {
+    height: 50px;
+    padding: 0 70px;
+  }
+}
+
+@media screen and (min-device-width: 768px) and (max-width: 1223px) {
+  .app-header {
+    height: 50px;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app-header {
+    position: relative;
+    height: 60px;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .app-header-logo {
+    justify-content: center;
+    flex: none;
+  }
+
+  .app-header-actions {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: #FFFFF1;
+    flex-direction: column;
+    transition: left 350ms cubic-bezier(.17,.67,0,1.13);
+  }
+
+  .app-header-actions__opened {
+    left: 0;
+  }
+
+  .app-header-action {
+    opacity: 1;
+    margin: 20px 0;
+    height: 45px;
+    background-color: #333333;
+    width: 200px;
+    color: #FFFFFF;
+    border-radius: 2px;
+  }
+
+  .app-header-actions-hamburger {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+  }
+
+  .app-header-actions-hamburger__opened .app-hamburger-line {
+    background-color: #D66B00;
+  }
+
+  .app-header-actions-hamburger__opened:hover .app-hamburger-line {
+    background-color: #ffa739;
+  }
+
+  .app-header-online-wrapper {
+    text-align: center;
+  }
+
+  .app-header-online {
+    display: inline-flex;
+    float: none;
+  }
+}

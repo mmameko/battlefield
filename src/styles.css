@@ -1,0 +1,44 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+html, body {
+  margin: 0;
+  font-family: Roboto-Regular;
+  color: #333;
+  height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-btn {
+  background-color: #333333;
+  border: none;
+  color: #FFFFFF;
+  border-radius: 2px;
+  height: 35px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.app-btn:disabled {
+  cursor: not-allowed;
+  background-color: #999999 !important;
+}
+
+.app-btn:focus {
+  outline: none;
+}
+
+.app-mobile-btn {
+  height: 45px;
+}

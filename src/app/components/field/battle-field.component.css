@@ -1,0 +1,15 @@
+.battle-field {
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+.battle-field-header {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.battle-field-td {
+  border: 1px solid #f7cf96;
+  padding: 0;
+}

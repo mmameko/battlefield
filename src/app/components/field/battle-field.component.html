@@ -1,0 +1,13 @@
+<table class="battle-field" (click)="clickField($event)">
+  <tr>
+    <td></td>
+    <td *ngFor="let letter of alphabet" class="battle-field-header">{{ letter }}</td>
+  </tr>
+  <tr *repeat="size; let i = index;">
+    <td class="battle-field-header">{{ i + 1 }}</td>
+    <td *repeat="size; let j = index;"
+        class="battle-field-td">
+      <battle-field-cell [type]="type" [id]="i * size + j" [isEmpty]="isEmpty(i * size + j)"></battle-field-cell>
+    </td>
+  </tr>
+</table>

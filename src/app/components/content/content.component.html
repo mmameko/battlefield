@@ -1,0 +1,20 @@
+<div class="app-content-start-wrapper">
+  <button class="app-content-start app-btn app-mobile-btn"
+          (click)="startGame()"
+          [disabled]="!isReady">Start Game</button>
+</div>
+<div class="app-content-step-spot-wrapper" [ngClass]="{'hidden': !gameStarted}">
+  <p [ngClass]="{'hidden': allowStep}" class="app-content-step-spot">Waiting...</p>
+  <p [ngClass]="{'hidden': !allowStep}" class="app-content-step-spot">Your Step!</p>
+</div>
+<div class="app-battle-field-wrapper">
+  <div class="app-battle-field" [ngClass]="{'battle-field-hidden': allowStep}">
+    <battle-field [type]="own" [ships]="ownerShips"></battle-field>
+  </div>
+  <div class="app-battle-field" [ngClass]="{'battle-field-hidden': !allowStep}">
+    <battle-field [type]="alien"
+                  [allowStep]="allowStep"
+                  (select)="selectCell($event)"
+                  [ships]="foregnerShips"></battle-field>
+  </div>
+</div>

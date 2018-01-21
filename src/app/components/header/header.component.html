@@ -1,0 +1,30 @@
+<header class="app-header">
+  <a class="app-header-actions-hamburger"
+     [ngClass]="{'app-header-actions-hamburger__opened': menuOpened}"
+     (click)="openMobileMenu()">
+    <span class="app-hamburger-line"></span>
+    <span class="app-hamburger-line"></span>
+    <span class="app-hamburger-line"></span>
+  </a>
+  <div class="app-header-logo">
+    <a class="app-header-link" href="/">
+      <span class="app-header-logo-text">BattleField</span>
+    </a>
+  </div>
+  <ul class="app-header-actions" [ngClass]="{'app-header-actions__opened': menuOpened}">
+    <li>
+      <button class="app-header-action" disabled>Custom</button>
+    </li>
+    <li>
+      <button class="app-header-action"
+              (click)="createRandomShips()"
+              [disabled]="!allowFillBattleField">Random</button>
+    </li>
+  </ul>
+  <div class="app-header-online-wrapper">
+    <div class="app-header-online">
+      <span class="app-header-online-count">{{ playersOnline }}</span>
+      <span class="app-header-online-text">online</span>
+    </div>
+  </div>
+</header>

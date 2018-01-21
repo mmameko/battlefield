@@ -1,0 +1,69 @@
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.app-content-start-wrapper {
+  margin: 15px;
+  text-align: center;
+}
+
+.app-content-start {
+  background-color: #D66B00;
+  transition: background-color 250ms ease-in-out;
+}
+
+.app-content-start:hover {
+  background-color: #ff8100;
+}
+
+.app-content-start:active {
+  color: #333333;
+}
+
+.app-battle-field-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.app-battle-field {
+  display: inline-flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.app-content-step-spot-wrapper {
+  display: flex;
+}
+
+.app-content-step-spot {
+  flex: 1;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1224px) {}
+
+@media screen and (min-device-width: 768px) and (max-width: 1223px) {
+  .app-content-start {
+    width: 50%;
+  }
+
+  .battle-field-hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app-content-start {
+    width: 100%;
+  }
+
+  .battle-field-hidden {
+    display: none;
+  }
+}
